@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Museu do Rádio — uma experiência digital sobre a história, as vozes e a tecnologia que conectaram gerações." />
+  <title>Museu do Rádio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Museu do Rádio - Início">
+      <span class="brand-title">MUSEU<br>DO RÁDIO</span>
+      <span class="brand-wave" aria-hidden="true">▂▄▆█▆▄▂</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#exposicoes">Exposições</a>
+      <a href="#linha-do-tempo">Linha do tempo</a>
+      <a href="#acervo">Acervo</a>
+      <a href="#historias">Ouça histórias</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação mobile">
+      <a href="#exposicoes">Exposições</a>
+      <a href="#linha-do-tempo">Linha do tempo</a>
+      <a href="#acervo">Acervo</a>
+      <a href="#historias">Ouça histórias</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">MUSEU VIRTUAL · HISTÓRIA, SOM E MEMÓRIA</p>
+        <h1>O som que <span>conectou</span> o mundo.</h1>
+        <p class="hero-text">Explore a história do rádio através de exposições interativas, vozes raras, objetos históricos e memórias que atravessaram gerações.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#linha-do-tempo">Começar a explorar <span>→</span></a>
+          <button class="audio-button" type="button" id="intro-button" aria-pressed="false">
+            <span class="play-icon">▶</span>
+            <span id="intro-label">Ouvir introdução</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-art reveal" aria-label="Ilustração de um rádio antigo com onda sonora animada">
+        <div class="wave-field" aria-hidden="true" id="wave-field"></div>
+        <div class="radio-wrap" id="radio-wrap">
+          <div class="radio-shadow"></div>
+          <div class="radio">
+            <div class="radio-face">
+              <div class="speaker-grid"></div>
+              <div class="dial-panel">
+                <div class="frequency-line"><span></span><span></span><span></span><span></span><span></span></div>
+                <div class="station-text">AM · 540 &nbsp; 700 &nbsp; 980 &nbsp; 1200 &nbsp; 1600</div>
+              </div>
+              <div class="controls">
+                <div class="knob"></div>
+                <div class="buttons"><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="knob"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="scroll-hint"><span>⌄</span> Role para explorar</p>
+      </div>
+    </section>
+
+    <section class="timeline-section content-section" id="linha-do-tempo">
+      <div class="section-heading reveal">
+        <p class="eyebrow">LINHA DO TEMPO INTERATIVA</p>
+        <h2>Sintonize uma época.</h2>
+        <p>Clique em uma década e descubra como o rádio acompanhou — e transformou — a sociedade.</p>
+      </div>
+
+      <div class="timeline reveal" role="group" aria-label="Décadas da história do rádio">
+        <div class="timeline-track"></div>
+        <button class="timeline-year active" data-year="1920" type="button"><span>1920</span></button>
+        <button class="timeline-year" data-year="1930" type="button"><span>1930</span></button>
+        <button class="timeline-year" data-year="1940" type="button"><span>1940</span></button>
+        <button class="timeline-year" data-year="1950" type="button"><span>1950</span></button>
+        <button class="timeline-year" data-year="1960" type="button"><span>1960</span></button>
+        <button class="timeline-year" data-year="1970" type="button"><span>1970</span></button>
+        <button class="timeline-year" data-year="1980" type="button"><span>1980</span></button>
+        <button class="timeline-year" data-year="1990" type="button"><span>1990</span></button>
+        <button class="timeline-year" data-year="2000" type="button"><span>2000</span></button>
+      </div>
+
+      <article class="timeline-card reveal" id="timeline-card" aria-live="polite">
+        <div>
+          <span class="timeline-big-year" id="timeline-big-year">1920</span>
+          <h3 id="timeline-title">O rádio começa a conquistar o Brasil</h3>
+        </div>
+        <p id="timeline-description">As primeiras experiências de radiodifusão abrem caminho para um novo meio capaz de levar informação, música e voz a milhares de pessoas ao mesmo tempo.</p>
+      </article>
+    </section>
+
+    <section class="exhibitions content-section" id="exposicoes">
+      <div class="section-heading reveal">
+        <p class="eyebrow">EXPOSIÇÕES EM DESTAQUE</p>
+        <h2>Histórias para ver e ouvir.</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="museum-card reveal">
+          <div class="card-visual microphone-visual" aria-hidden="true"><div class="mic"></div><div class="sound-lines"></div></div>
+          <div class="card-content"><span>EXPOSIÇÃO 01</span><h3>Vozes que ecoam para sempre.</h3><p>A emoção ao vivo que atravessou gerações.</p><a href="#historias">Explorar exposição →</a></div>
+        </article>
+        <article class="museum-card reveal">
+          <div class="card-visual frequency-visual" aria-hidden="true"><div class="frequency-ring"></div></div>
+          <div class="card-content"><span>EXPOSIÇÃO 02</span><h3>Rádio, tecnologia e inovação.</h3><p>Como a tecnologia ampliou fronteiras e aproximou o mundo.</p><a href="#acervo">Explorar exposição →</a></div>
+        </article>
+        <article class="museum-card reveal">
+          <div class="card-visual memory-visual" aria-hidden="true"><span>1942</span><span>1958</span><span>1969</span></div>
+          <div class="card-content"><span>EXPOSIÇÃO 03</span><h3>Memórias no dial.</h3><p>Programas, acontecimentos e momentos que marcaram época.</p><a href="#linha-do-tempo">Explorar exposição →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="archive-story content-section" id="acervo">
+      <div class="archive-panel reveal">
+        <p class="eyebrow">ACERVO DIGITAL</p>
+        <h2>Milhares de memórias. Um só lugar.</h2>
+        <p>Explore uma coleção digital de aparelhos, fotografias, documentos, anúncios e gravações históricas.</p>
+        <div class="archive-stats">
+          <div><strong>1.250+</strong><span>objetos</span></div>
+          <div><strong>850+</strong><span>áudios</span></div>
+          <div><strong>620+</strong><span>fotografias</span></div>
+        </div>
+      </div>
+
+      <div class="story-panel reveal" id="historias">
+        <p class="eyebrow">OUÇA HISTÓRIAS</p>
+        <blockquote>“De repente, aquela caixa de madeira trazia o mundo para dentro de casa.”</blockquote>
+        <div class="story-player">
+          <button type="button" id="story-play" aria-label="Reproduzir história">▶</button>
+          <div class="story-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <span id="story-time">00:00</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about content-section" id="sobre">
+      <div class="about-number reveal">100%</div>
+      <div class="about-copy reveal"><p class="eyebrow">UM MUSEU SEM PAREDES</p><h2>O acervo está onde você estiver.</h2><p>O Museu do Rádio nasce como uma experiência digital. Cada página pode combinar narrativa, imagem, som e interação para transformar pesquisa histórica em descoberta.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span class="brand-title">MUSEU<br>DO RÁDIO</span><span class="brand-wave">▂▄▆█▆▄▂</span></a>
+    <p>Uma experiência digital dedicada à memória do rádio.</p>
+    <span>© <span id="year"></span> Museu do Rádio</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
