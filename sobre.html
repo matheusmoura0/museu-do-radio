@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a proposta do Museu do Rádio, um museu digital dedicado à história, às vozes, aos programas e à tecnologia do rádio no Brasil.">
+  <title>Sobre o Museu | Museu do Rádio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Museu do Rádio - Início"><span class="brand-title">MUSEU<br>DO RÁDIO</span><span class="brand-wave">▂▄▆█▆▄▂</span></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="historia.html">História</a><a href="exposicoes.html">Exposições</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="acervo.html">Acervo</a><a href="sobre.html" aria-current="page">Sobre</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobile-menu"><a href="historia.html">História</a><a href="exposicoes.html">Exposições</a><a href="linha-do-tempo.html">Linha do tempo</a><a href="acervo.html">Acervo</a><a href="sobre.html">Sobre</a></nav>
+  </header>
+
+  <main>
+    <section class="page-hero content-section">
+      <p class="eyebrow">UM MUSEU SEM PAREDES</p>
+      <h1>Preservar o rádio é preservar parte da memória do Brasil.</h1>
+      <p class="hero-text">O Museu do Rádio é um projeto digital dedicado a reunir, contextualizar e apresentar histórias sobre o rádio, seus personagens, programas, equipamentos e transformações tecnológicas.</p>
+    </section>
+
+    <section class="content-section editorial-grid">
+      <article class="editorial-copy reveal">
+        <p class="eyebrow">NOSSA PROPOSTA</p>
+        <h2>Um arquivo vivo, feito para ser explorado.</h2>
+        <p>O rádio acompanhou mudanças políticas, culturais e tecnológicas profundas. Este projeto nasce para apresentar essa história de forma acessível, visual e interativa, combinando textos, linhas do tempo, exposições digitais e, futuramente, registros sonoros e documentos digitalizados.</p>
+        <p>Em vez de reproduzir a lógica de um museu físico, o site foi pensado desde o início para a internet: cada tema pode se transformar em uma experiência própria, conectada a outras histórias do acervo.</p>
+      </article>
+      <aside class="fact-panel reveal">
+        <span class="eyebrow">PRINCÍPIOS</span>
+        <strong>Contexto</strong><p>Explicar por que cada programa, aparelho ou personagem importa.</p>
+        <strong>Memória</strong><p>Valorizar registros históricos e fontes confiáveis.</p>
+        <strong>Acesso</strong><p>Construir uma experiência gratuita, responsiva e disponível de qualquer lugar.</p>
+      </aside>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading reveal"><p class="eyebrow">COMO O MUSEU CRESCE</p><h2>Uma coleção construída por camadas.</h2></div>
+      <div class="cards-grid">
+        <article class="museum-card reveal"><div class="card-content"><span>01</span><h3>Histórias</h3><p>Artigos sobre emissoras, programas, artistas, acontecimentos e tecnologias.</p></div></article>
+        <article class="museum-card reveal"><div class="card-content"><span>02</span><h3>Exposições</h3><p>Experiências editoriais que conectam imagens, contexto histórico e narrativa.</p></div></article>
+        <article class="museum-card reveal"><div class="card-content"><span>03</span><h3>Acervo</h3><p>Uma estrutura preparada para catalogar peças, documentos, fotografias e áudios com metadados.</p></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-title">MUSEU<br>DO RÁDIO</span><span class="brand-wave">▂▄▆█▆▄▂</span></a><p>Memória, som e história em um museu digital.</p><div><a href="contato.html">Contato</a> · <a href="privacidade.html">Privacidade</a></div><span>© <span id="year"></span> Museu do Rádio</span></footer>
+  <script src="site.js"></script>
+</body>
+</html>
